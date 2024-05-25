@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Title">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.pokerappreal.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstToTitle"
+            app:destination="@id/Title" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.pokerappreal.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/Title"
+        android:name="com.example.pokerappreal.Title"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/title">
+
+        <action
+            android:id="@+id/action_Title_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_Title_to_Options"
+            app:destination="@id/Options" />
+    </fragment>
+    <fragment
+    android:id="@+id/Options"
+    android:name="com.example.pokerappreal.Options"
+    android:label="@string/second_fragment_label"
+    tools:layout="@layout/options">
+
+<!--    <action-->
+<!--        android:id="@+id/action_Title_to_FirstFragment"-->
+<!--        app:destination="@id/FirstFragment" />-->
+        <action
+            android:id="@+id/action_Options_to_Game"
+            app:destination="@id/Game" />
+    </fragment>
+    <fragment
+        android:id="@+id/Game"
+        android:name="com.example.pokerappreal.Game"
+        tools:layout="@layout/game">
+
+    </fragment>
+
+</navigation>
+

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <ImageView
+        android:id="@+id/HandCard1"
+        android:layout_width="105dp"
+        android:layout_height="176dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/HandCard2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back_dark" />
+
+    <ImageView
+        android:id="@+id/HandCard2"
+        android:layout_width="105dp"
+        android:layout_height="176dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/HandCard1"
+        app:srcCompat="@drawable/back_dark" />
+
+    <ImageView
+        android:id="@+id/CenterCard2"
+        android:layout_width="105dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/CenterCard3"
+        app:layout_constraintStart_toEndOf="@+id/CenterCard1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_dark" />
+
+    <ImageView
+        android:id="@+id/CenterCard5"
+        android:layout_width="105dp"
+        android:layout_height="176dp"
+        android:layout_marginEnd="103dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/CenterCard4"
+        app:layout_constraintTop_toBottomOf="@+id/CenterCard2"
+        app:srcCompat="@drawable/back_dark" />
+
+    <ImageView
+        android:id="@+id/CenterCard4"
+        android:layout_width="105dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="98dp"
+        app:layout_constraintEnd_toStartOf="@+id/CenterCard5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CenterCard1"
+        app:srcCompat="@drawable/back_dark" />
+
+    <ImageView
+        android:id="@+id/CenterCard1"
+        android:layout_width="105dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/CenterCard2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_dark" />
+
+    <ImageView
+        android:id="@+id/CenterCard3"
+        android:layout_width="105dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/CenterCard2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_dark" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/HandCard1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/Fold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fold" />
+
+        <Button
+            android:id="@+id/Check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Check" />
+
+        <Button
+            android:id="@+id/Bet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bet" />
+
+        <Button
+            android:id="@+id/Raise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Raise +$100" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TotalBet"
+        android:layout_width="247dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="40dp"
+        android:text="Total Bet: 0"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Purse"
+        android:layout_width="198dp"
+        android:layout_height="24dp"
+        android:text="Your Purse: 1000"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TotalBet" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
